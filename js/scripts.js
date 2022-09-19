@@ -96,7 +96,7 @@ function drawCalendar(type){
 
         
         ctx.fillStyle = "rgba(0,0,0,1)";
-        ctx.font = "italic 60px Montserrat";
+        ctx.font = "italic " + 60 * scaleFactor +"px Montserrat";
         ctx.fillText("Find out more at Vineyard61.org", 60, canvas.height-80);
 
         var daysString = [];
