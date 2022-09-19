@@ -12,12 +12,6 @@ function run(){
     $.getJSON( "https://bvc.churchsuite.com/embed/calendar/json", function( data ) {
         calendar = data;
     });
-
-    var background = new Image();
-    background.onload = function () {
-        ctx.drawImage(background, 0, 0);
-    };
-    background.src = './assets/BaseCalendarBlank.jpg';
 }
 
 function getEvents(){
@@ -25,9 +19,6 @@ function getEvents(){
     var numberOfDays = parseInt($('#daysnumber').val());
     var endDate = new Date(startDate);
     endDate.setDate(endDate.getDate() + numberOfDays);
-
-    console.log(startDate.getDate());
-    console.log(endDate);
 
     var rangeItems = [];
 
@@ -141,7 +132,6 @@ function drawCalendar(type){
         for (var l = 0; l < lineCount; l++){
             var yPoint = startPoint + (l * lineHeight);
             var xPointOff = xOffset * l;
-            console.log(yPoint);
 
             ctx.font = "bold italic " + 190 * scaleFactor + "px Rockville";
             ctx.fillStyle = "rgba(255,255,255,0.85)";
