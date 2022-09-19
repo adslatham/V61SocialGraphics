@@ -174,19 +174,24 @@ function downloadSquare(){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         var newTab = window.open('about:blank','image from canvas');
         newTab.document.write("<img src='" + image + "' alt='from canvas'/>");
+    }else{
+        var link = document.createElement('a');
+        link.download = "calendar.jpg";
+        link.href = image;
+        link.click();
     }
-
-    var link = document.createElement('a');
-    link.download = "calendar.jpg";
-    link.href = image;
-    link.click();
 }
 
 function downloadInstastory(){
     var output = document.getElementById("instCanvas");
     image = output.toDataURL("image/jpeg");
-    var link = document.createElement('a');
-    link.download = "calendar.jpg";
-    link.href = image;
-    link.click();
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        var newTab = window.open('about:blank','image from canvas');
+        newTab.document.write("<img src='" + image + "' alt='from canvas'/>");
+    }else{
+        var link = document.createElement('a');
+        link.download = "calendar.jpg";
+        link.href = image;
+        link.click();
+    }
 }
