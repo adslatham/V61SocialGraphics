@@ -39,3 +39,15 @@
 #instCanvas {
   width: 100%;
 }
+
+#mont{
+  font-family: "Montserrat";
+  font-size:0.1px;
+  margin:0;
+}
+
+#rock{
+  font-family: "Rockville";
+  font-size:0.1px;
+  margin:0;
+}
