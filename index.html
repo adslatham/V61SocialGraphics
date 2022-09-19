@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>V61 Graphics Generator</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Fonts-->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/jquery-ui.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">V61 Graphics Generator</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="text-center mt-5 col-sm-6">
+                    <h5>Calendar</h5>
+                    <p>Start Date:<br/><input type="text" id="datepicker"></p>
+                    <p>Number Of Days:<br/><input type="number" id="daysnumber" value="7"></p>
+                    <button onclick="getEvents()">Get Events</button>
+                </div>
+                <div class="text-center mt-5 col-sm-6">
+                    <h5>Title:</h5>
+                    <input type="text" id="titleInput" value="This week at Vineyard 61">
+                    <h5>Selected Events</h5>
+                    <ul class="list-group" id="eventsList"></ul>
+                    <button onclick="buildCalendar()">Build Calendar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Square</h5>
+                    <canvas id="gfxCanvas" width="2048" height="2048">
+                    </canvas>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Stories</h5>
+                    <canvas id="instCanvas" width="1080" height="1920">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
