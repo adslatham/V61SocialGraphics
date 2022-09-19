@@ -176,3 +176,21 @@ function drawCalendar(type){
     };
     background.src = backgroundImagePath;
 }
+
+function downloadSquare(){
+    var output = document.getElementById("gfxCanvas");
+    image = output.toDataURL("image/jpeg");
+    var link = document.createElement('a');
+    link.download = "calendar.jpg";
+    link.href = image;
+    link.click();
+}
+
+function downloadInstastory(){
+    var output = document.getElementById("instCanvas");
+    image = output.toDataURL("image/jpeg");
+    var link = document.createElement('a');
+    link.download = "calendar.jpg";
+    link.href = image;
+    link.click();
+}
