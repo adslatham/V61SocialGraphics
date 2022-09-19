@@ -23,8 +23,11 @@ function run(){
 function getEvents(){
     var startDate = $( "#datepicker" ).datepicker( "getDate" );
     var numberOfDays = parseInt($('#daysnumber').val());
-    var endDate = new Date();
-    endDate.setDate(startDate.getDate() + numberOfDays);
+    var endDate = new Date(startDate);
+    endDate.setDate(endDate.getDate() + numberOfDays);
+
+    console.log(startDate.getDate());
+    console.log(endDate);
 
     var rangeItems = [];
 
@@ -116,7 +119,7 @@ function drawCalendar(type){
                     daysString.push(days[thisDate.getDay()]);
                     eventsString.push("");
                     timesString.push("");
-                    lineCount++;
+                    lineCount++;2
                 }
 
                 daysString.push("");
@@ -132,7 +135,7 @@ function drawCalendar(type){
 
         var textScale = (lineHeight/110) * scaleFactor;
 
-        var startPoint = (canvas.height)/2 - (totalSize/2) + 60;
+        var startPoint = (canvas.height)/2 - (totalSize/2) + 100;
         var xOffset = 10;
 
         for (var l = 0; l < lineCount; l++){
@@ -140,9 +143,9 @@ function drawCalendar(type){
             var xPointOff = xOffset * l;
             console.log(yPoint);
 
-            ctx.font = "bold italic " + 160 * scaleFactor + "px Montserrat";
+            ctx.font = "bold italic " + 190 * scaleFactor + "px Rockville";
             ctx.fillStyle = "rgba(255,255,255,0.85)";
-            ctx.fillText(daysString[l], 200 + xPointOff, yPoint+120);
+            ctx.fillText(daysString[l], 200 + xPointOff, yPoint+140);
         
             ctx.font = Math.min(90, 60 * textScale) + "px Montserrat";
             ctx.fillStyle = "rgba(0,0,0,1)";
@@ -150,7 +153,7 @@ function drawCalendar(type){
         
             ctx.font = "bold italic " + Math.min(90 ,60 * textScale) + "px Montserrat";
             ctx.textAlign = 'right';
-            ctx.fillText(timesString[l], canvas.width-200 + xPointOff, yPoint+20);
+            ctx.fillText(timesString[l], canvas.width-200 + xPointOff, yPoint+40);
             ctx.textAlign = 'left';
             
             if (daysString[l] == ""){

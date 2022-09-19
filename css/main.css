@@ -1,6 +1,9 @@
-.col-sm-6,
-.col-sm-12,
-.col-sm-3 {
+@font-face {
+  font-family: Rockville;
+  src: url("/assets//Rockville\ Solid.otf") format("opentype");
+}
+
+.box {
   outline: 1px dashed rgb(92, 92, 92);
   outline-offset: -4px;
   padding: 30px;

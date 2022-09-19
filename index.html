@@ -28,27 +28,25 @@
         <!-- Page content-->
         <div class="container-fluid">
             <div class="row">
-                <div class="text-center mt-5 col-sm-6">
+                <div class="text-center col-sm-3 box">
                     <h5>Calendar</h5>
                     <p>Start Date:<br/><input type="text" id="datepicker"></p>
                     <p>Number Of Days:<br/><input type="number" id="daysnumber" value="7"></p>
                     <button onclick="getEvents()">Get Events</button>
                 </div>
-                <div class="text-center mt-5 col-sm-6">
+                <div class="text-center col-sm-4 box">
                     <h5>Title:</h5>
                     <input type="text" id="titleInput" value="This week at Vineyard 61">
                     <h5>Selected Events</h5>
                     <ul class="list-group" id="eventsList"></ul>
                     <button onclick="buildCalendar()">Build Calendar</button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-3 box">
                     <h5>Square</h5>
                     <canvas id="gfxCanvas" width="2048" height="2048">
                     </canvas>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2 box">
                     <h5>Stories</h5>
                     <canvas id="instCanvas" width="1080" height="1920">
                     </canvas>
