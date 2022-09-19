@@ -170,6 +170,12 @@ function drawCalendar(type){
 function downloadSquare(){
     var output = document.getElementById("gfxCanvas");
     image = output.toDataURL("image/jpeg");
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        var newTab = window.open('about:blank','image from canvas');
+        newTab.document.write("<img src='" + image + "' alt='from canvas'/>");
+    }
+
     var link = document.createElement('a');
     link.download = "calendar.jpg";
     link.href = image;
