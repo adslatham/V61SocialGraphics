@@ -17,7 +17,7 @@ function run(){
     background.onload = function () {
         ctx.drawImage(background, 0, 0);
     };
-    background.src = '../assets/BaseCalendarBlank.jpg';
+    background.src = './assets/BaseCalendarBlank.jpg';
 }
 
 function getEvents(){
@@ -47,7 +47,7 @@ function getEvents(){
 function buildCalendar(){
     canvas = document.getElementById("gfxCanvas"),
     ctx = canvas.getContext("2d");
-    backgroundImagePath = "../assets/BaseCalendarBlank.jpg";
+    backgroundImagePath = "./assets/BaseCalendarBlank.jpg";
     drawCalendar(0);
 }
 
@@ -61,7 +61,7 @@ function startSecondDraw(){
 
         canvas = document.getElementById("instCanvas"),
         ctx = canvas.getContext("2d");
-        backgroundImagePath = "../assets/CalendarInsStBase.png";
+        backgroundImagePath = "./assets/CalendarInsStBase.png";
         drawCalendar(1);
     }
 }
