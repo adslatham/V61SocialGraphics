@@ -91,7 +91,7 @@ function drawCalendar(type){
         }
         logo.src = "./assets/V61Logo.png";
 
-        var scaleFactor = (canvas.width / 2048)
+        var scaleFactor = (canvas.width / 2048) * $('#customRange1').val();
 
         ctx.fillStyle = "rgba(0,0,0,1)";
         ctx.font = "italic bold " + 100 * scaleFactor + "px Montserrat";
