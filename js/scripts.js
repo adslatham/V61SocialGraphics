@@ -86,7 +86,7 @@ function drawCalendar(type){
                 startSecondDraw();
             }
         }
-        logo.src = "../assets/V61Logo.png";
+        logo.src = "./assets/V61Logo.png";
 
         var scaleFactor = (canvas.width / 2048)
 
